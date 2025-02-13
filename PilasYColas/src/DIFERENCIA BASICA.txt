@@ -1,0 +1,5 @@
+En las pilas sólo usamos top porque insertamos y extraemos en el mismo punto.
+
+En las colas NO es así, hay que usar FIRST y LAST porque insertamos por un sitio y extraemos por el otro.
+
+Da igual que sean estructuras estáticas o dinámicas.

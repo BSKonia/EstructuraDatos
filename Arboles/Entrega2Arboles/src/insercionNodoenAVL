@@ -1,0 +1,39 @@
+
+Esta es la estructura del AVL antes de la rotación
+Análisis antes de la rotación
+El árbol tiene esta estructura:
+
+       7
+      / \
+     6   10
+          \
+           21
+             \
+              30
+Identificación del desequilibrio:
+
+El nodo 10 tiene un factor de equilibrio (FE) de:
+// El factor de equilibro de un nodo es la diferencia entre la altura de su subárbol
+   derecho y su subárbol izquierdo. La solución del ejercicio consiste en calcular para
+   todos los nodos del árbol su factor de equilibrio, teniendo en cuenta la definición
+   del factor y considerando que la altura de un árbol vacío es -1, y la de un árbol de
+   un nodo es 0.
+
+FE=Altura derecha−Altura izquierda=1−(−1)=2
+Esto significa que el nodo 10 está desequilibrado.
+Para corregir este desequilibrio, se necesita una rotación hacia la izquierda en el nodo 10.
+Rotación izquierda en el nodo 10: La rotación a la izquierda reestructura el subárbol de manera que el nodo 21 se convierte en el nuevo padre del subárbol, y 10 pasa a ser su hijo izquierdo. El nodo 30, que era hijo derecho de 21, permanece como su hijo derecho. Esto reorganiza los nodos mientras se mantienen las reglas del ABB.
+
+Árbol después de la rotación
+El árbol resultante sería:
+
+       7
+      / \
+     6   21
+         /  \
+        10   30
+Explicación del resultado
+10 ahora es el hijo izquierdo de 21, lo cual es correcto porque 10 < 21.
+30 permanece como hijo derecho de 21, lo cual también es correcto porque 30 > 21.
+El subárbol queda equilibrado porque el nodo 10 tiene un FE de 0 y el nodo 21 también.
+Este cambio asegura que el árbol AVL mantenga su equilibrio y que las operaciones de búsqueda continúen siendo eficientes.
